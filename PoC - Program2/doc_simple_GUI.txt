@@ -1,0 +1,43 @@
+Documentation for the GUI - Proof of Concept Program 2 
+
+The second Proof of Concept (PoC) program is focused on developing a Graphical User Interface (GUI) that will be used for the final implementation of the project.
+The ambitious goal for the final project is to have a mobile application, a "Sudoku" game.
+
+My idea for the design and user interface is to keep it minimalistic, with a dark theme and a simple layout. 
+The user can choose between a few different additional themes, and the application will remember the user's choice for the next time they open the application.
+The user will be able to choose between a few different difficulty levels, and the application will generate a new Sudoku puzzle for the user to solve.
+
+The user interface will be written entirely in React Native, and the application will be tested on Android devices.
+
+The application will consist of the following screens and corresponding components:
+- #Home screen
+  - slide bar to choose different difficulty levels -> DONE
+  - button to choose different theme
+  - button to start a new game -> DONE
+  - button to continue from previous game 
+  - button to view the history of games, redirect to #History -> DONE
+
+- #Game screen
+  - the Sudoku puzzle - grid of 9x9 cells and 1-9 numbers displayed as buttons under the grid -> DONE
+  - button to validate the solution
+  - button to clear the selected cell -> DONE
+  - button to clear the entire grid 
+  - button to return to #Home screen -> DONE
+
+- #History screen
+  - list of all previous attempts
+    - displayed as a button with the date and time of the attempt
+    - when clicked, the button will redirect to #Solved screen with the solved attempt loaded
+  - button to return to #Home screen -> DONE
+
+  - #Solved screen
+    - displays the solved Sudoku puzzle
+    - button to return to #History screen  
+
+- #About screen
+  - displays information about the application
+  - button to return to #Home screen
+
+- #Instructions screen
+  - displays instructions on how to solve a Sudoku game and how to unteract with the application
+  - button to return to #Home screen

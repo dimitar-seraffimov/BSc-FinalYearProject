@@ -1,0 +1,45 @@
+Documentation for the N-Queens Solver - Proof of Concept Program 1
+
+The first Proof of Concept (PoC) program provides a solution to the N-Queens puzzle. 
+This is a classic problem, in which N queens are placed on an N×N chessboard in such a way that no two queens threaten each other. 
+The program finds all possible solutions for a given number of queens. The program uses a recursive backtracking algorithm to find all possible solutions to the puzzle.
+Each solution is represented as a list of N tuples, where each tuple represents the position of a queen on the board (row, column).
+
+Files in the current folder:
+    - n_queens_solver.py: the main Python script that contains the algorithm and execution code
+
+How to run:
+    Ensure Python 3.x is installed on your system.  ->   Open a terminal or command prompt. ->
+    Navigate to the directory containing the script.    ->  Run the script using the command python n_queens_solver.py.
+
+Configuration:
+    numQueens: set this variable at the beginning of the script to define the number of queens and the size of the chessboard. The default is set to 8.
+
+Below is an explanation of the functions in the program and the expected output the program produces.
+
+Functions:
+isSafe(testRow, testCol)
+
+    Purpose: checks if it is safe to place a queen at the specified row and column.
+    Parameters:
+        testRow: the row where the queen is to be placed
+        testCol: the column where the queen is to be placed
+    Returns: Boolean value. True if it is safe to place the queen, False otherwise.
+
+placeQueen(row)
+
+    Purpose: recursively attempts to place queens on the board
+    Parameters:
+        row: the current row where the function is trying to place a queen
+    Returns: None. The function operates by side effects, modifying the currentSolution and solutions lists.
+
+Output:
+The program prints the number of solutions found and lists all the solutions in the console. 
+Each solution is represented as a list, where the index represents the row and the value at that index represents the column of the queen.
+
+Example: 
+For numQueens = 5, the program will find 10 solutions and print them to the console.
+For numQueens = 6, the program will find 4 solutions and print them to the console.
+For numQueens = 7, the program will find 40 solutions and print them to the console.
+For numQueens = 8, the program will find 92 solutions and print them to the console.
+For numQueens = 9, the program will find 352 solutions and print them to the console.

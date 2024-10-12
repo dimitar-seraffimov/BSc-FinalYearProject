@@ -1,0 +1,159 @@
+Documentation and explanation of the Backtracking algorithm - Proof of Concept Program 3
+
+The main question this proof of concept program is trying to answer is: 
+  - How can I use recursive backtracking to find the best solution to very challenging Sudoku puzzles?
+
+Based on my research and understanding, there are two types of recursion described: "basic" and backtracking recursion. 
+This document will focus on the backtracking algorithm but I will explain what I understood for both of them.
+
+## Basic Recursion
+
+Simply explained, the basic recursion:
+- is a function that calls itself, either directly or indirectly, until it reaches the final base case;
+- each call to the function contributes a little bit to the solution;
+- calls continue until the base case is reached, at this point the recursion stops, and the results are combined to solve the original problem.
+
+In summary, the "basic" recursion is general function that breaks down a problem into smaller repetitive sub-problems, that are incremental and inductive steps, in which
+each one calls the same function with a variant of the original problem until a certain condition / base case is satisfied. 
+At this point, the recursion stops and the results are combined to solve the original problem.
+
+## Backtracking Recursion
+
+Backtracking is a systematic method to iterate through all possible configurations of a search space. It is a general algorithm which must be customized for each problem.
+
+Solving Sudoku puzzles involves a form of exhaustive search of possible configurations. However, exploiting constraints to rule out certain possibilities for certain positions, 
+prunes the search to the point where the specific Sudoku puzzle can be solved by hand. Backtracking is the key to implementing exhaustive search programs correctly and efficiently.
+
+Simlpy explained, backtracking is a special approach to problem-solving that involves:
+- depth-first search on an implicit graph of configurations;
+- exploring all possible solutions to a problem;
+- eliminating those solutions that fail to satisfy the constraints of the problem;
+- "backtracking" to a previous step and trying alternative solutions.
+
+There are 3 main categories of problems that can be solved by using backtracking recursion:
+- enumeration problem: the goal is to generate all possible solutions to a problem or count the total number of possible solutions to a problem;
+- decision problem: the goal is to find one specific solution to a problem or prove that one exists;
+- optimization problem: the goal is to find the best possible solution to a given problem.
+
+## backtracking_algo.py
+
+In the case of this project, the focus will be to solve the given Sudoku puzzle by the one and only possible solution. 
+Therefore, the backtracking algorithm will be used to solve the "decision problem". 
+
+In the following weeks, I will write a program to generate Sudoku puzzles inside the future mobile application.
+The program will generate a random Sudoku board where all numbers are filled in and then remove some of them to create the puzzle. This will ensure that the puzzle always has a solution. BUT!
+Making sure that the generated puzzle has exactly one solution will be a bit more challenging as I must leave at least 17 numbers for a 9x9 sudoku (Game theory). More information in Diary.txt file.
+
+Backtracking is really just depth-first search on an implicit graph of configurations. It can easily be used to iterate through all subsets or permutations of a set.
+
+The backtracking_algo.py program follows logically the following steps to solve the Sudoku puzzle:
+  - initializes dictionaries to track the empty cells in the Sudoku grid and their count in each row and column;
+  - sorts the empty cell positions based on the combined count of remaining empty cells in their respective rows and columns;
+  - fill the elements recursively into the grid;
+  - backtrack when the algorithm reaches an unsafe position.
+
+Programs in the current folder:
+  - backtracking_algo.py: the main Python code containing the algorithm and the grid for the example Sudoku puzzle
+
+How to run:
+  Ensure Python 3.x is installed on the system.  ->   Open a terminal or command prompt. ->
+  Navigate to the directory containing the script.    ->  Run the script using the command = python backtracking_algo.py.
+
+Configuration:
+  grid: set the Sudoku puzzle to be solved
+
+
+# 
+Below is provided an explanation of the code in the program and the expected output the program produces:
+
+Dictionaries:
+  grid: the Sudoku puzzle to be solved
+  position: designed to keep track of the coordinates (row and column) of all empty cells in the grid, an empty cell is represented by 0 in the grid.
+            This dictionary is important to the backtracking algorithm, as it identifies where to make guesses and fill in numbers.
+  remaining: used to count the number of empty cells in each row and column. By knowing which rows and columns have fewer empty cells, we can prioritize them and optimize the backtracking process.
+            This approach reduces the search space, as the more constrained rows and columns are most likely to be filled first, which are often easier to solve.
+
+  The dictionaries are utilised for the following reasons: 
+    - knowing the exact positions and the number of empty cells in each row and column, makes the backtracking process more efficient;
+    - instead of blindly guessing numbers for every cell, the algorithm starts with the most constrained parts of the grid, where fewer choices are real options;
+    - the dictionaries simplify the representation of the grid's state;
+    - the 'position' dictioinary provides direct access to empty cells;
+    - the 'remaining' dictionary provides a quick overview of which rows and columns are closer to being completed;
+  This simplification is particularly useful in recursive functions, where we need to maintain and update the state of the grid at each step.
+
+Functions:
+
+  initialize_dictionaries(grid):
+    Purpose: 
+      initializes dictionaries to track the empty cells in the Sudoku grid and their count in each row and column.
+    Parameters:
+      grid: the puzzle to be solved
+    Returns: a tuple containing two dictionaries:
+      'position': dictionary with keys (row, column) of empty cells, values as 0
+      'remaining': dictionary with keys as row or column indices, values as count of empty cells
+
+  print_grid(grid)
+    Purpose: 
+      this function prints the puzzle in the console - it sets the format of the output.
+    Parameters:
+      grid: the puzzle to be solved
+    Returns:
+      None
+
+  valid(grid, num, pos):
+    Purpose: 
+      the function checks if the number can be placed in the cell, according to the Sudoku rules.
+    Parameters:
+      grid: the puzzle to be solved
+      num: the number to be placed
+      pos: a tuple (row, column) indicating the position in the grid
+    Returns:
+      True: if the number can be placed in the specified position
+      False: if the number cannot be placed in the specified position
+
+  solve_sudoku(grid, sorted_positions):
+    Purpose: 
+      the function iteratively fills the grid by placing numbers in valid positions and backtracks when necessary -> it solves the Sudoku puzzle.
+    Parameters:
+      grid: the puzzle to be solved
+      sorted_positions: list of positions (row, column) of empty cells, sorted to optimize the solving process
+    Returns:
+      True: if the puzzle is solved successfully
+      False: if the puzzle cannot be solved
+
+
+Output:
+  The program prints in the console the original Sudoku grid and below it - the solved Sudoku puzzle.
+  Each row is printed on a separate line and each column is separated by a space, 
+  to visually separate the 3x3 boxes - there are dashes between the 3x3 blocks.
+
+Example: 
+  There are three puzzle examples in the program. I believe that the first one is the easiest and the third one is the most challenging.
+  The second and the third examples are commented out. To run them, uncomment the corresponding lines in the program.
+
+  The original Sudoku grid:
+  5 0 4  | 0 0 0  | 0 0 0
+  0 2 0  | 0 0 0  | 0 1 0
+  0 0 0  | 3 0 1  | 0 4 0
+  - - -    - - -    - - -
+  0 0 8  | 0 7 0  | 9 0 0
+  1 0 0  | 0 0 0  | 0 0 4
+  0 0 7  | 0 9 0  | 6 0 0
+  - - -    - - -    - - -
+  0 7 0  | 0 0 8  | 0 0 0
+  0 8 0  | 0 0 0  | 0 9 0
+  0 0 0  | 0 0 0  | 1 0 3
+
+
+  The solved Sudoku puzzle:
+  5 1 4  | 2 6 7  | 8 3 9
+  7 2 3  | 4 8 9  | 5 1 6
+  8 6 9  | 3 5 1  | 2 4 7
+  - - -    - - -    - - -
+  6 3 8  | 5 7 4  | 9 2 1
+  1 9 5  | 8 2 6  | 3 7 4
+  2 4 7  | 1 9 3  | 6 5 8
+  - - -    - - -    - - -
+  3 7 2  | 9 1 8  | 4 6 5
+  4 8 1  | 6 3 5  | 7 9 2
+  9 5 6  | 7 4 2  | 1 8 3

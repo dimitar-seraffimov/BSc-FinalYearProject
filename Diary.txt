@@ -1,0 +1,356 @@
+/Sprint 1
+- During the first sprint I had the important task to write my Project Plan and present it to my supervisor. 
+  The plan is ready, as well as I am ready in terms of fully understanding the project requirements, objectives and the development path that needs to be followed.
+- Started reading the "Introduction to machine learning with Python" [1] which is part of the reading list for the "Machine Language" model I am taking. 
+  The book will give me the foundations need to understand the code I will be writing for my project and the knowledge needed in my "Machine Language" model.
+- Finished reading the "Modeling Sudoku Puzzles with Python" [2] article in which the modeling of Sudoku puzzles in a variety of different mathematical domains 
+  was discussed and simplified.
+
+References:
+- [1] Muller, A.C. and Guido, S., 2017. Introduction to machine learning with Python. O’Reilly.
+- [2] Davis, S., Henderson, M. and Smith, A., 2010. Modeling Sudoku Puzzles with Python. In practice, 7, p.3.
+
+
+
+
+
+/Sprint 2
+- During Sprint 2, I focused on exploring in-depth the foundational references in the project plan, intently spending time on understanding the algorithms and technologies 
+  that were explained and presented. From the discussions on the Backtracking search optimization algorithm [1] to the complex nuances of constraint satisfaction problems 
+  discussed by Brailsford [2], each one of the recources provided me with valuable knowledge into problem-solving methodologies and computational techniques. 
+- Specifically, the frameworks presented in the "Solving the set cover problem and the problem of exact cover by 3-sets" [3], the elegance of Knuth's Dancing Links [4] 
+  also gave me a comprehensive understanding of solving puzzle-type problems. I also familiarized myself with the dynamics of stochastic optimization methods by K. Marti [5] 
+  and I had a quick overview of the "Agile software development models TDD, FDD, DSDM, and Crystal Methods: A survey" where I was happy to learn more about the various agile 
+  software development models and confirmed my decision to utilize the Agile development in the project.
+- Furthermore, I briefly delved into the challenges of Sudoku puzzle modeling and its computational ratings by studying the works of R. Pelánek [7], T. Yato and T. Seta [8]. 
+  The practical approach with which some essential algorithms were illustrated by R. Stephens [9] using Python equipped me with a few practical strategies on how to approach 
+  the next steps in the project -> writing the Proof of Concept Programs. Out of curiocity, I had some time to review the Eisenman's take on React Native [11], and I was 
+  happy to find out that there are more than valuable insights on how to successfully set the foundational stage for the GUI. 
+
+- Taken the time to read and learn something new before the start of the development phase, I've also started crafting user stories and am in the initial phase of 
+  sketching a user flow diagram, giving a clear direction to the visual aspect of the application. The following /Sprint 3 will bring forward the culmination of these 
+  preparatory steps into real work. My immediate goals include finalizing the user stories, completing the user flow diagrams, and initiating coding for the first
+  Proof of Concept program. Concurrently, I will begin laying the groundwork for the GUI, ensuring it aligns seamlessly with the technologies that I will use and with the 
+  user stories.
+
+References:
+- The references used are from my Project Plan, I am not going to add them to this file as they are simply reused here.
+
+
+I have some questions which I will address with my supervisor: 
+  - Do I want the application to give hints for next steps?
+  - How do I test the application's algorithms and their implementation while playing the game? Do I have to do this? Do I have to display some information?
+
+
+
+
+
+/Sprint 3
+
+
+01/11/2023, 11:10am - meeting with my supervisor, what I have taken from the meeting:
+Do I want the application to give hints for next steps?
+  - Yes, it should not be that hard and it is an important feature.
+How do I test the application's algorithms and their implementation while playing the game? Do I have to do this? Do I have to display some information?
+  - Test the implementation of those algorithms manually during the development process. Focus on the outcome and implementation (technologies used, time under dev etc.) in the final report.
+- It is a good idea to send my presentation and my report to my Supervisor before submitting it for grading. 
+- Start with the implementation of the 8 Queens problem, continue with implementing the Backtracking algorithm.
+
+##############################################################################################################################################################################
+
+- I worked on developing and documenting the first Proof of Concept (PoC) program, a classic computational problem. 
+  The program is written in Python and utilizes a recursive backtracking algorithm to find all possible solutions for placing N queens on an N×N chessboard without 
+  any two queens threatening each other. Each solution is represented as a list of N tuples, indicating the precise positions of the queens on the board.
+
+- In the process, I created a comprehensive report detailing the program's functionality, usage, and configuration. 
+  Documented explanation of the algorithm can be found here [1]. The report serves as a user guide, providing clear instructions on how to run the script, 
+  set up the necessary configurations, and understand the output. 
+
+- Reflecting on today's work, I am satisfied with the progress made and the depth of analysis provided in the report. The documentation is detailed and well-structured, 
+  ensuring that any future users or developers can easily understand and utilize the program. I will continue with the development of the second PoC program, which will look
+  into the backtracking algorithm's application in solving the Sudoku puzzle.
+
+References:
+- [1] file "\doc_n_queens_solver.txt" in the "PoC - N-Queens puzzle" folder.
+
+
+
+
+
+/Sprint 4
+
+- Started working on the second Proof of Concept (PoC) program, which will focus on the application's GUI. 
+  The initial plan to create a simple, intuitive, and user-friendly GUI will be followed so that the frontend will be mostly completed and will not require a lot of changes 
+  in a later stage of development. The user interface will be written entirely using the React Native framework, and the application will be tested on Android devices.
+
+  There is more information regarding the GUI in the "PoC - Program2" folder, more specifically in the "doc_simple_GUI.txt" file. 
+  Here is a list of what I will strive to achieve in the following week:
+  #Home screen
+    - slide bar with options to choose from different difficulty levels
+    - button to choose different theme
+    - button to start a new game
+    - button to continue from previous game
+    - button to view the history of games, redirect to #History -> for now the redirect will be to a blank page
+
+  #Game screen
+    - the Sudoku puzzle - grid of 9x9 cells and 1-9 numbers displayed as buttons under the grid
+    - button to validate the solution -> for now the button will be inactive
+    - button to clear the selected cell 
+    - button to clear the entire grid 
+    - button to return to #Home screen
+
+  #About screen
+    - displays information about the application
+    - button to return to #Home screen
+
+  #Instructions screen
+    - displays instructions on how to solve a Sudoku game and how to interact with the application
+    - button to return to #Home screen
+
+- I also reconsidered the user stories and I have made the required changes. Changes were needed as the previous file was not structured properly and it was not focused only on the user stories for the application.
+
+I fell quite ill on Friday, 11th November 2023, I was supposed to complete the described components in the previous week, but I was not able to do so. I will try to complete them in the following week. 
+
+
+##############################################################################################################################################################################
+
+I am still working on the GUI but decided it is time to implement the backtracking algorithm and therefore I will start working on the third Proof of Concept (PoC) program in a separate /thirdProgram branch.
+
+The work over the next two weeks (20-26th and 27-30th November) will be considered as part of Sprint 4 and it will be focused on the following:
+- Implementing and documenting the backtracking algorithm in the third PoC program.
+- Completing the GUI pages for the second PoC program.
+- Creating a presentation and sending it over for review to my supervisor - before the 24th November.
+
+/Nov 21, 2023
+
+After careful research on the backtracking algorithm I came up with implementation which unfortunately does not provide the desired results. 
+I will have to do more research and try to find a solution to the problem. For now, I will keep this program as a stepping stone for the next - corrected implementation of the algorithm. 
+The first_backtracking_algo.py is in the "PoC - Program3" folder and it is documented in the "doc_first_backtracking_algo.txt" file. I will continue working on the GUI for the second PoC program.
+
+I also realised that the README.md file is not up to date and I will have to update it with the instructions on how to run each PoC program. I will do this in the following week.
+
+
+/ Nov 23, 2023
+
+As I mentioned on the 21st of November, I will keep the first_backtracking_algo.py as a stepping stone for the next - corrected implementation of the algorithm.
+Today, I believe to have found the solution to the problem and I have implemented it in the backtracking_algo.py file in the "PoC - Program3" folder.
+I have thoroughly documented the algorithm in the "doc_backtracking_algo.txt" file. I will continue working on the GUI for the second PoC program.
+
+Notes:
+In the following weeks, I will write a program to generate Sudoku puzzles inside the future application.
+The program will generate a random Sudoku board where all numbers are filled in and then it will remove some of them to create an unique puzzle. This will ensure that the puzzle always has a solution. 
+BUT!
+Making sure that the generated puzzle has exactly one solution will be a bit more challenging as I must leave at least 17 numbers for a 9x9 sudoku (Game theory). 
+I will strive to implement this before the Interim Review submition date.
+
+/ Dec 07, 2023
+
+I have completed a simple "demo" GUI for the future application. The GUI is written in React Native and it is tested on Android devices.
+The GUI is not fully functional, but it is a good starting point for the future development of the application.
+I have also updated the README.md file with instructions on how to run each PoC program.
+
+/ 22 Jan 2024
+
+While I was thinking about the design and implementation of the important features, I realised that I need more knowledge on React Native, 
+I decided to complete this React Native course on Udemy: https://www.udemy.com/course/react-native-the-practical-guide/
+In the past few weeks I have not worked directly on the project, but I am halfway with the completion of the course and I am confident that I will be able to implement all features I have in mind.
+
+DEADLINE 
+22 March 2024
+
+The ideal scenario for me is to be ready with the code by the end of February, so that I leave time for bug fixing and writing the final report + presentation.
+I am writing here with the intend to create a structured plan for the last nine weeks of the project:
+- 22 Jan - 28 Jan: complete the React Native course, read more on database implementation and think of introducing account creation.
+- 29 Jan - 04 Feb: GUI creation - complete the layout as I have it in mind(use Figma for the design), have every element in place, but not functional.
+- 05 Feb - 11 Feb: GUI creation - complete the layout as I have it in mind(use Figma for the design), have every element in place, but not functional.
+- 12 Feb - 18 Feb: make the GUI functional, implement the backtracking algorithm and the Sudoku puzzle generator. 
+- 19 Feb - 25 Feb: feature implementation - develop and integrate each feature, start with simpler ones like validation and proceed to hint generation and time tracking.
+- 26 Feb - 03 Mar: implement 'one step back' and completion statistics + start fixing bugs.
+- 04 Mar - 10 Mar: fix bugs and start writing the final report.
+- 11 Mar - 17 Mar: finalise the report and presentation.
+
+DEADLINE 
+22 March 2024
+
+29/01/2024, 08/02/2024
+
+Notes on where to begin with puzzle generation and backtracking algorithm implementation:
+- write tests for the sudoku generator + write the sudoku generator - Done = PoC - PuzzleGeneration
+- connect the sudoku generator with the already created backtracking algorithm in PoC - Program3 - Done = PoC - PuzzleGeneration
+- connect the sudoku generator and "solve" option with the GUI
+
+18/02/2024
+I used Python to research and develop the initial versions of the backtracking algorithms and the Sudoku puzzle generator.
+In order to integrate these algorithms into the React Native application, I decided to duplicate the logic and rewrite the files in JavaScript.
+This approach is better in the following ways:
+- use unified language for the entire application;
+- direct integration with the React Native framework, without additional backend server to run the Python code;
+- ensure that the algorithms are compatible with the React Native framework;
+- better performance for the end-user, as the logic will be executed on the user's side;
+
+Today I created the tests for the generator and the solver, and "translated" the code from /PoC - PuzzleGeneration from Python to JavaScript.
+Added these files in the /algorithms folder and the next step will be to integrate them with the frontend.
+
+21/02/2024
+
+In the past week I am focused on implementing puzzle generation logic and GUI.
+The puzzle is successfully generated based on the selected difficulty level and the SudokuGenerator function creates a new puzzle with unique solution.
+There are clues of how many numbers there are left for the user to input. Added "Solve it" button which functionality/error message will be fixed in the future.
+I have implemented different highlighting, depending on the number "type" and also made the code and files more readable by:
+renaiming files, renaiming functions and extracting some functions in new files.
+
+The progress is going as planned, the application generates an unique puzzle, there is a tracker for the remaining numbers and it can be solved.
+I will continue introducing new features in the next commits.
+
+23/02/2024
+
+Decided to change the initial approach to the plan made on 22 Jan. I am developing each feature's front and backend simultaneously.
+In this branch I will focus on developing the "Hint" option, which will give the user the correct number for the currently selected cell.
+After that, functionality to the "X" button will be added - it will delete the number from the currently selected cell (of course if the cell is not locked).
+Added the "Step back" button functionality, will need to find some icons to replace the text buttons.
+
+26/02/2024
+
+Restructured the sudokuGrid.js file, I will keep each (group) feature in a different file, so that the code is more readable and easier to maintain.
+I need to make some more structural changes to the code, but I am happy with the programs so far.
+
+27/02/2024
+Thinking about the so called "hint" feature, I decided to change/rename it to "validate" feature. 
+The user will be able to validate it's input at any time and the application will:
+- highlight any mistakes in red;
+- give a popup message if at this point all input is correct.
+
+Implemented this feature today. I created a new popup message componenet and added the functionality to the "validate" button.
+I was trying to create proper tests, because I feel like I might be missing some edge cases but I couldn't manage to configure the testing environment properly.
+Will do that soon. For now everything seems to work fine, even though it is not the best approach.
+
+28/02/2024
+
+Decoupled the sudokuGridLogic.js file into separate hooks files:
+ -useCellSelection.js
+ -useHintpad.js
+ -useNumberCounts.js
+ -useNumbarPad.js
+ -useSudokuSolver.js
+ -useValidate.js.
+
+In these smaller files, the code is more readable and easier to understand and maintain.
+Managed to fix a couple of "bugs" in the progress, they were mainly related to the logic implementation.
+Will confirm that everything works properly by testing the application on a real device.
+
+29/02/2024
+Added comments and checked for any bugs. Fixed a bug with the step back feature.
+
+
+01/03/2024
+I am starting to implement "Resume Previous" button functionality. The button will be used to resume the last game the user was playing.
+
+03/03/2024
+Added the "Resume Previous" button functionality. The button is used to resume the last game the user played.
+I had to learn how to use the AsyncStorage in React Native and also change the storing logic of the grid state.
+
+Starting IOS and Android testing today.
+
+13/03/2024
+In the past week I had to focus on other university assignments and I was sick for a couple of days.
+I was thinking a lot about the discussed issue in the puzzle generation logic, specifically possible two valid options for some numbers, a very niche case.
+I identified the problem in the SudokuGenerator.js file - removeNumbersFromGrid() and hasUniqueSolution() functions. 
+They did not perform enough checks and I will have to rewrite them. The original implementation could generate puzzles with multiple valid solutions because of insufficient uniqueness checks post-number removal.
+
+After the changes, the hasUniqueSolution method:
+- implemented an early termination strategy, terminates the search as soon as a second solution is identified 
+  -- reduces computational effort by avoiding exhaustive searches when unnecessary.
+
+After the changes, the removeNumbersFromGrid method:
+- implemented systematic trial-and-error method, removing numbers and checking for uniqueness
+  -- restoring to original state if the removal compromises puzzle's uniqueness.
+  
+I added additional tests to confirm the new implementation is correct. Made some small changes to the app icons and some comments.
+
+14/03/2024
+Added more tests to confirm the new implementation is correct, I needed to double check.
+
+15/03/2024
+Added crucial functionality to the application, the history is saved and controlled from an additional hook.
+This allows on resuming the game:
+- the user can go back to the initialGrid; before the history was handled only inside the sudokuGridLogic.js file, not "globally" - bad initial design
+This required me to introduce a new hook and to change the logic in the sudokuGridLogic.js and gameScreen.js files.
+I am happy with the result, although I am not sure how to test this properly. This feature requires of me to test how history is stored and controlled in the entire application.
+how am I supposed to test that?
+
+16/03/2024
+I have to fix the saving logic for the specific case when there is no user input - as of now the time and the whole game is not properly saved on leaving the screen rather only on making a grid change.
+As the whole game state, including the time, currently is saved when a new game is started or when there is user input. 
+I will have to change the logic in the sudokuGridLogic.js file so that the game is saved AND before leaving the game screen.
+
+18/03/2024
+All sudoku properties are properly saved on user input and on leaving the game screen.
+At the moment, all planned functionality is working correct, I am happy with the result.
+
+I used the useFocusEffect function, a hook from the @react-navigation/native package to save the game state on leaving the game screen.
+Added some small additional styling.
+
+20/03/2024
+Fully implemented the history screen, where the user can see the history of the games solved.
+The history is saved in the AsyncStorage. The user can see the date, the time spent on solving the game, the difficulty level and the puzzle number.
+On click, the user can see the grid of the game and the solution.
+
+21/03/2024
+Added styling and content inside the instructions screen. 
+The user can "learn" how to play the game and how to interact with the application.
+Restructured the application's structure - organised files in new folders.
+Added some additional comments and fixed some small bugs. 
+I am preparing the final version of the application for the submission. 
+I will continue with testing the application on real devices (Andoroid and IOS) and make sure everything works as expected.
+
+
+21/03/2024
+Supervisor Meeting questions:
+code:
+- how should I test GUI related functionalities? I am not sure how to test the AsyncStorage and the navigation.
+- is the file structure okay?
+
+report:
+15k words?
+keep the Interim Report structure + add more details on the implemented features, new sections and the challenges I faced?
+
+- for now my plan is to discuss:
+-- the project's structure:
++++ components, hooks, styles, navigation, AsyncStorage, testing
++++ application packaging and hosting (Expo)
++++ more explanation regarding the updating generate sudoku algorithm
+
+-- the implemented features:
++++ game reset to initial grid
++++ step back feature
++++ validate grid feature
++++ automatically solve grid feature
++++ history feature = thinking of adding final change, delete previous games feature
++++ resume previous game feature
+
+-- the challenges I faced:
++++ fixing the puzzle generation algorithm
++++ AsyncStorage and navigation testing
++++ the application is not perfect, I can handle time tracking better
+
+
+From the meeting with my supervisor:
+- I have to write additional tests for each small component, this should take about a day as I have covered most of the application with console.log() tests.
+  Therefore, I do not expect any new bugs or errors.
+- I have to add a section in the report regarding:
+  the testing of the application / the application's structure / the implemented features / the challenges I faced / professional issues / possible future improvements
+- For the demo day all I need to prepare is a working version of the application, either on my phone or on the emulator. 
+  I will also prepare a poster with the application's features and the technologies used.
+
+
+For now, I am doing good with writing the report, I will finish testing today/tomorrow and all will be good for the submission.
+
+I will be "mocking" functionalities. Completed testing all important functionalities and utils functions. 
+This ensures the application's stability and I am ready for the submission.
+I might have missed some corner cases in the tests but I am confident in my work and the thorough (console.log) testing during the development process.
+
+I am happy with the result!
+I will give myself time in the next few days to go over the report again and make sure everything is in place.
+
+I have uploaded the final version of the application on the Expo Dev server and this is the Android APK:
+https://expo.dev/artifacts/eas/2Nr9pawmLtQdvR3KYBiPUK.apk

@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Sudoku FYP",
+    "slug": "sudoku-app",
+    "description": "This is a Sudoku mobile application for my Final Year Project.",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/appIcon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/appIcon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/appIcon.png",
+        "backgroundColor": "#000000"
+      },
+      "package": "com.zkac333.sudokuapp"
+    },
+    "web": {
+      "favicon": "./assets/images/appIcon.png"
+    },
+    "owner": "zkac333",
+    "extra": {
+      "eas": {
+        "projectId": "37b214de-c667-46aa-a860-2c629d24eba3"
+      }
+    }
+  }
+}

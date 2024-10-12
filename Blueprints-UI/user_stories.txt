@@ -1,0 +1,28 @@
+# User 
+  Starting a Game
+  - I want to start a new Sudoku game and I want to have the option to choose the difficulty level (easy, medium, hard, extreme).
+
+  Interactions with the Sudoku grid
+  - I want to click on an empty cell and enter a number, so I can attempt to solve the puzzle.
+  - I want to highlight/mark a cell of interest and comment numbers possible for the cell, so I can remember to come back to them later.
+  - I want the option to erase a number I previously entered, so I can correct mistakes.
+
+  Game Assistance
+  - I want to have a "Verify" button which will highlight all conflicting/wrong numbers, so I know where I've made mistakes.
+  - I want the option to get a hint for my next step, so I can get assistance when I'm stuck.
+  - I want to know how many mistakes I've made so far, so I can evaluate how well I'm doing.
+
+  Progress and Pausing
+  - I want to pause my game, so I can take breaks without affecting any timed challenges.
+  - I want to see how long I've been playing the current puzzle, so I can challenge myself to complete the level faster next time.
+
+  Completion and Rewards
+  - Upon completion, I want to be "congratulated", see my completion time and the mistakes I have made.
+  - Furthermore, I want some bonus if I have not used the "Verify" button and completed the puzzle successfully.
+
+  Game Customization and Settings
+  - I want to adjust the game's visual theme, so I can customize my playing experience.
+
+  History and Stats
+  - I want to view my game history, so I can see the puzzles I've completed.
+  - I want to view statistics (e.g., average completion time, average mistakes, average puzzle level), so I can track my improvement over time.

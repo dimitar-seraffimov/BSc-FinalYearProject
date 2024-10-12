@@ -1,0 +1,93 @@
+After writing the first code for the backtracking algorithm, I realized that there are some issues that need to be fixed. The algorithm should:
+- check for more than one solution;
+- solve more challenging puzzles;
+- check if no solution exists.
+
+## My first Backtracking algorithm
+  The first_first_backtracking_algo.py program implements the backtracking algorithm to solve simple Sudoku puzzles. 
+  The program needs to be improved to check for more than one solution, solve more challenging puzzles and check if no solution exists.
+
+Programs in the current folder:
+  - first_backtracking_algo.py: the main Python script that contains the algorithm and the grid for the example Sudoku puzzle
+
+How to run:
+  Ensure Python 3.x is installed on the system.  ->   Open a terminal or command prompt. ->
+  Navigate to the directory containing the script.    ->  Run the script using the command = python first_backtracking_algo.py.
+
+Configuration:
+  grid: set the Sudoku puzzle to be solved. There are three example puzzles in the program that just need to be uncommented to be solved.
+
+# 
+Below is an explanation of the functions in the program and the expected output the program produces:
+#
+
+Functions:
+
+  solve(grid):
+    Purpose: this function solves the Sudoku puzzle using the first backtracking algorithm from the Proof Of Concept - Program 3 folder.
+    Parameters:
+      grid: the puzzle to be solved
+    Returns:
+      True - if the puzzle is solved
+      False - if the puzzle is not solved
+
+  valid(grid, row, col, num)
+    Purpose: this function checks if the number can be placed in the cell.
+    Parameters:
+      grid: the puzzle to be solved
+      row: the row of the cell
+      col: the column of the cell
+      num: the number to check
+    Returns:
+      True - if the number can be placed in the cell
+      False - if the number cannot be placed in the cell
+
+  print_grid(grid)
+    Purpose: this function prints the puzzle in the console - it sets the format of the output.
+    Parameters:
+      grid: the puzzle to be solved
+    Returns:
+      None
+
+  find_empty(grid)
+    Purpose: this function finds the next empty cell in the puzzle.
+    Parameters:
+      grid: the puzzle to be solved
+    Returns: the row and the column of the next empty cell in the puzzle.
+
+
+Output:
+  The program prints in the console the original Sudoku grid and below it - the solved Sudoku puzzle.
+  Each row is printed on a separate line and each column is separated by a space, 
+  to visually separate the 3x3 boxes - there are dashes between the 3x3 blocks.
+
+Example: 
+  There are three puzzle examples in the program. I believe that the first one is the easiest and the third one is the most challenging.
+  The second and the third examples are commented out. To run them, uncomment the corresponding lines in the program.
+
+  The original Sudoku grid:
+  5 0 4  | 0 0 0  | 0 0 0
+  0 2 0  | 0 0 0  | 0 1 0
+  0 0 0  | 3 0 1  | 0 4 0
+  - - -    - - -    - - -
+  0 0 8  | 0 7 0  | 9 0 0
+  1 0 0  | 0 0 0  | 0 0 4
+  0 0 7  | 0 9 0  | 6 0 0
+  - - -    - - -    - - -
+  0 7 0  | 0 0 8  | 0 0 0
+  0 8 0  | 0 0 0  | 0 9 0
+  0 0 0  | 0 0 0  | 1 0 3
+
+
+  The solved Sudoku puzzle:
+  5 1 4  | 2 6 7  | 8 3 9
+  7 2 3  | 4 8 9  | 5 1 6
+  8 6 9  | 3 5 1  | 2 4 7
+  - - -    - - -    - - -
+  6 3 8  | 5 7 4  | 9 2 1
+  1 9 5  | 8 2 6  | 3 7 4
+  2 4 7  | 1 9 3  | 6 5 8
+  - - -    - - -    - - -
+  3 7 2  | 9 1 8  | 4 6 5
+  4 8 1  | 6 3 5  | 7 9 2
+  9 5 6  | 7 4 2  | 1 8 3

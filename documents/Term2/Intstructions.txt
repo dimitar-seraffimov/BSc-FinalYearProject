@@ -1,0 +1,7 @@
+I have uploaded the Android application on the Expo Dev server and this is the link to download the APK:
+https://expo.dev/artifacts/eas/2Nr9pawmLtQdvR3KYBiPUK.apk
+
+To ensure the tests are running correctly, please follow the steps below:
+- navigate to the root directory of the sudoku-app - ".\FincalCode\sudoku-app"
+- run 'npm test' in the terminal
+- the tests should run and pass
